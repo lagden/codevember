@@ -223,6 +223,7 @@ module.exports = (grunt) ->
     'critical'
     'replace'
     'copy:build'
+    'copy:icon'
   ]
 
   grunt.registerTask 'serve', [
