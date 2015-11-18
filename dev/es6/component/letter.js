@@ -14,19 +14,6 @@ class AddLetter {
 		context.font = this.font;
 		context.fillStyle = rgbToHex(cc, cc, cc);
 		context.fillText(this.char, x, y);
-
-		// if (this.firstTime) {
-		// 	const buffer = 8;
-		// 	this.tempCanvas.width = this.size + buffer;
-		// 	this.tempCanvas.height = this.size + buffer;
-		// 	this.tempCtx.font = this.font;
-		// 	this.tempCtx.fillStyle = rgbToHex(255, 255, 255);
-		// 	this.tempCtx.fillText(this.char, 0, this.size);
-		// 	this.firstTime = false;
-		// 	this.x = x;
-		// 	this.y = y;
-		// }
-		// context.drawImage(this.tempCanvas, x, y);
 	}
 }
 
