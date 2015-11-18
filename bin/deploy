@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 GH_TOKEN=`cat .token`
-GH_REF="github.com:lagden/codevember.git"
+GH_REF="github.com/lagden/codevember.git"
 
 set -e
 rm -rf build || exit 0;
