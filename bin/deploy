@@ -5,8 +5,10 @@ GH_REF="github.com:lagden/codevember.git"
 
 set -e
 rm -rf build || exit 0;
+rm -rf /tmp/build-codevember || exit 0;
 grunt build
-cd build
+cp -r build /tmp/build-codevember
+cd /tmp/build-codevember
 git init
 git config user.name "Thiago Lagden"
 git config user.email "lagden@gmail.com"
