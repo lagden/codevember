@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../dev/es6/app.js"],"names":[],"mappings":"AAAA,YAAY,CAAC;;AAEb,OAAO,CAAC,CAAC,UAAU,CAAC,EAAE,YAAM;AAC3B,QAAO,CAAC,CAAC,UAAU,CAAC,CAAC,CAAC;CACtB,CAAC,CAAC","file":"app.js","sourcesContent":["'use strict';\n\nrequire(['./config'], () => {\n\trequire(['app/core']);\n});\n"]}
