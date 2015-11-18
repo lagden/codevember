@@ -1,0 +1,10 @@
+extends ./extends/layout.jade
+
+block title
+  title Matrix
+
+block critical
+  +critical('/*{index.css}*/')
+
+block content
+  canvas#matrix

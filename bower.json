@@ -1,0 +1,25 @@
+{
+  "name": "matrix",
+  "description": "matrix fail",
+  "license": "UNLICENSED",
+  "private": true,
+  "authors": [
+    {
+      "name": "Thiago Lagden",
+      "email": "lagden@gmail.com",
+      "url": "http://lagden.in"
+    }
+  ],
+  "moduleType": [
+    "amd",
+    "es6"
+  ],
+  "keywords": [
+    "matrix",
+    "fail"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.20",
+    "webfontloader": "~1.6.10"
+  }
+}

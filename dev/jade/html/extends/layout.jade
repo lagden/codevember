@@ -1,0 +1,55 @@
+include ../includes/mixin.jade
+
+doctype html
+html(lang='pt-BR')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    block description
+      meta(name='description', content='DGTAL Studio é especialista em serviços digitais (Design, Web e Marketing) e traz soluções para que sua empresa se destaque e obtenha grandes resultados.')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
+    link(rel='icon', href='favicon.ico')
+    block title
+      title We are Digital - DGTAL Studio
+    block critical
+    unless useLoadCss
+      link(href='css/static.css', media='screen', rel='stylesheet', type='text/css')
+  body
+    block content
+    block scripts
+      script(async, src='js/lib/requirejs/require.js', data-main='js/app')
+
+    if useLoadCss
+      script(type='text/javascript').
+        /* eslint no-var: 0 */
+        /* eslint wrap-iife: [2, "outside"] */
+
+        (function (window, document) {
+          'use strict';
+
+          var raf = window.requestAnimationFrame ||
+                    window.mozRequestAnimationFrame ||
+                    window.webkitRequestAnimationFrame ||
+                    window.msRequestAnimationFrame;
+          var h = document.getElementsByTagName('head')[0];
+
+          function addDOM(css) {
+            var l = document.createElement('link');
+            l.rel = 'stylesheet';
+            l.type = 'text/css';
+            l.media = 'screen';
+            l.href = css;
+            h.insertBefore(l, h.lastChild);
+          }
+
+          function loadCSS() {
+            var lista = ['css/static.css'];
+            lista.forEach(addDOM);
+          }
+
+          if (raf) {
+            raf(loadCSS);
+          } else {
+            window.addEventListener('load', loadCSS);
+          }
+        }(window, document));
